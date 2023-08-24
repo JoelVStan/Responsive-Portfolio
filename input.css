@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --bg-color: #1f242d;
+    --second-bg-color: #323946;
+    --text-color: #fff;
+    --main-color: #0ef;
+}
+
+@layer base {
+    html {
+        @apply text-[62.5%] overflow-x-hidden
+    }
+    
+    body {
+        @apply bg-bg-color text-text-color
+    }
+}
+
+@layer components {
+    .header {
+        @apply fixed top-0 left-0 w-full py-[2rem] px-[9%] bg-bg-color flex justify-between items-center 
+    }
+
+    .logo {
+        @apply text-[2.5rem] text-text-color font-semibold 
+    }
+
+    .navbar a {
+        @apply text-[1.7rem] text-text-color ml-[4rem] transition duration-300 hover:text-main-color
+    }
+
+    #menu-icon {
+        @apply text-[3.6rem] text-text-color hidden
+    }
+}
+

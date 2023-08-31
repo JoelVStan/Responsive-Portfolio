@@ -13,29 +13,193 @@
 
 @layer base {
     html {
-        @apply text-[62.5%] overflow-x-hidden
+        @apply text-[62.5%] overflow-x-hidden xl:text-[55%] xs:text-[50%]
     }
     
     body {
         @apply bg-bg-color text-text-color
     }
+    section {
+        @apply min-h-[100vh] pt-[10rem] pb-[2rem] px-[9%] lg:pt-[10rem] lg:px-[3%] lg:pb-[2rem]
+    }
+    span {
+        @apply text-main-color
+    }
 }
 
 @layer components {
     .header {
-        @apply fixed top-0 left-0 w-full py-[2rem] px-[9%] bg-bg-color flex justify-between items-center 
+        @apply fixed top-0 left-0 w-full py-[2rem] px-[9%] bg-bg-color flex justify-between items-center lg:py-[2rem] lg:px-[3%]
+    }
+
+    .header.sticky {
+        @apply border-b border-b-bg-color
     }
 
     .logo {
         @apply text-[2.5rem] text-text-color font-semibold 
     }
 
+    .navbar {
+        @apply md:absolute md:top-full md:left-0 md:w-full md:py-[1rem] md:px-[3%] md:bg-bg-color md:border-t md:border-bg-color md:shadow-md md:hidden
+    }
+
+    .navbar.active {
+        @apply md:block
+    }
+
     .navbar a {
-        @apply text-[1.7rem] text-text-color ml-[4rem] transition duration-300 hover:text-main-color
+        @apply text-[1.7rem] text-text-color ml-[4rem] transition duration-300 md:block md:text-[2rem] md:my-[3rem] md:mx-0
+    }
+
+    .navbar a:hover,
+    .navbar a.active {
+        @apply text-main-color
     }
 
     #menu-icon {
-        @apply text-[3.6rem] text-text-color hidden
+        @apply text-[3.6rem] text-text-color hidden md:block
+    }
+
+    .home {
+        @apply flex items-center justify-center md:flex-col md:text-center
+    }
+
+    .home-content h3 {
+        @apply text-[3.2rem] font-bold md:text-[2.6rem]
+    }
+
+    .home-content h3:nth-of-type(2) {
+        @apply mb-[2rem]
+    }
+
+    .home-content h1 {
+        @apply text-[5.6rem] font-bold leading-snug md:text-[5rem]
+    }
+
+    .home-content p {
+        @apply text-[1.6rem]
+    }
+
+    .social-media a {
+        @apply inline-flex justify-center items-center w-[4rem] h-[4rem] bg-transparent border-[0.2rem] border-solid border-main-color rounded-full text-[2rem] text-main-color mt-[3rem] mr-[1.5rem] mb-[3rem] ml-0 transition duration-300 ease-in hover:bg-main-color hover:text-second-bg-color hover:shadow-md hover:shadow-main-color
+    }
+
+    .btn {
+        @apply inline-block py-[1rem] px-[2.8rem] bg-main-color text-second-bg-color rounded-[4rem] shadow-[0_0_1rem_var(--main-color)] text-[1.6rem] tracking-widest font-bold transition duration-300 ease-in hover:shadow-none
+    }
+
+    .about {
+        @apply flex justify-center items-center gap-[2rem] bg-second-bg-color md:flex-col-reverse md:text-center
+    }
+
+    .heading {
+        @apply text-center text-[4.5rem]
+    }
+
+    .about-content h2 {
+        @apply text-left leading-tight font-bold md:text-center
+    }
+
+    .about-content h3 {
+        @apply text-[2.4rem] font-semibold
+    }
+
+    .about-content p {
+        @apply text-[1.6rem] mt-[2rem] mb-[3rem] mx-0
+    }
+
+    .portfolio {
+        @apply bg-bg-color mb-28 lg:mb-[7rem]
+    }
+
+    .portfolio h2 {
+        @apply font-bold mb-[4rem] md:pb-[3rem]
+    }
+
+    .portfolio-container {
+        @apply grid grid-cols-3 items-center gap-[2.5rem] md:grid-cols-2 sm:grid-cols-1
+    }
+
+    .portfolio-container .portfolio-box {
+        @apply relative rounded-3xl shadow-[0_0_1rem_var(--bg-color)] overflow-hidden flex
+    }
+
+    .portfolio-box img {
+        @apply w-full transition duration-300 ease-in hover:scale-110
+    }
+
+    .portfolio-box .portfolio-layer {
+        @apply absolute bottom-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-main-color flex justify-center items-center flex-col text-center py-0 px-[4rem] translate-y-full transition duration-500
+    }
+
+    .portfolio-box:hover .portfolio-layer {
+        @apply translate-y-0
+    }
+
+    .portfolio-layer h4 {
+        @apply text-[3rem] font-bold
+    }
+
+    .portfolio-layer p {
+        @apply text-[1.6rem] mt-[0.3rem] mx-0 mb-[1rem]
+    }
+
+    .portfolio-layer a {
+        @apply inline-flex justify-center items-center w-[5rem] h-[5rem] bg-text-color rounded-full
+    }
+
+    .portfolio-layer a i {
+        @apply text-[2rem] text-bg-color
+    }
+
+    .contact {
+        @apply bg-second-bg-color lg:min-h-screen
+    }
+
+    .contact h2 {
+        @apply mb-[3rem] font-bold
+    }
+
+    .contact form {
+        @apply max-w-[70rem] my-[1rem] mx-auto text-center mb-[3rem]
+    }
+
+    .contact form .input-box {
+        @apply flex justify-between flex-wrap
+    }
+
+    .contact form .input-box input, 
+    .contact form textarea {
+        @apply w-full p-[1.5rem] text-[1.6rem] text-text-color bg-bg-color rounded-xl my-[0.7rem] mx-0
+    }
+
+    .contact form .input-box input {
+        @apply w-[49%] xs:w-full
+    }
+
+    .contact form textarea {
+        @apply resize-none
+    }
+
+    .contact form .btn {
+        @apply mt-[2rem] cursor-pointer
+    }
+
+    .footer {
+        @apply flex justify-between items-center flex-wrap py-[2rem] px-[9%] bg-bg-color lg:py-[2rem] lg:px-[3%] xs:flex-col-reverse
+    }
+
+    .footer-text p {
+        @apply text-[1.6rem] xs:text-center xs:mt-[2rem]
+    }
+
+    .footer-iconTop a {
+        @apply inline-flex justify-center items-center p-[0.8rem] bg-main-color rounded-xl transition duration-300 ease-in hover:shadow-[0_0_1rem_var(--main-color)]
+    }
+
+    .footer-iconTop a i {
+        @apply text-[2.4rem] text-bg-color
     }
 }
 

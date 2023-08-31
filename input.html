@@ -12,14 +12,14 @@
 <body class="box-border scroll-smooth font-Poppins">
     <!-- header design -->
     <header class="header">
-        <a href="#" class="logo">Portfolio.</a>
+        <a href="#home" class="logo">Portfolio.</a>
 
         <i class='bx bx-menu' id="menu-icon"></i>
 
         <nav class="navbar">
-            <a href="#home">Home</a>
+            <a href="#home" class="active">Home</a>
             <a href="#about">About</a>
-            <a href="#projects">Projects</a>
+            <a href="#portfolio">Projects</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
@@ -29,32 +29,136 @@
         <div class="home-content">
             <h3>Hello, It's Me</h3>
             <h1>Joel Stanley</h1>
-            <h3>And I'm a <span>Software Engineer</span></h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta, magnam. Nihil, deserunt odio necessitatibus minus facilis consequatur.</p>
+            <h3>And I'm a <span class="multiple-text"></span></h3>
+            <p>I am a Computer Science Engineering graduate from Kerala, India, driven by a passion for the software field.</p>
             <div class="social-media">
-                <a href="#"><i class='bx bxl-facebook'></i></a>
-                <a href="#"><i class='bx bxl-twitter' ></i></a>
-                <a href="#"><i class='bx bxl-instagram' ></i></a>
-                <a href="#"><i class='bx bxl-linkedin' ></i></a>
+                <a href="https://www.facebook.com/iamjoelstan"><i class='bx bxl-facebook'></i></a>
+                <a href="https://www.twitter.com/iamjoelstan"><i class='bx bxl-twitter' ></i></a>
+                <a href="https://www.instagram.com/iam.joelstan"><i class='bx bxl-instagram' ></i></a>
+                <a href="https://www.linkedin.com/in/joel-varghese-stanley/"><i class='bx bxl-linkedin' ></i></a>
             </div>
-            <a href="#" class="btn">Download CV</a>
+            <a href="https://github.com/JoelVStan/Resume-JoelStan" class="btn">Download CV</a>
+            <a href="https://github.com/JoelVStan/" class="btn ml-5">View Github</a>
         </div>
 
         <div class="home-img">
-            <img src="images/home.png" alt="">
+            <img src="images/home.png" alt="" class="max-w-[35vw] animate-floatImage md:max-w-[70vw] md:mt-[4rem]">
         </div>
     </section>
 
     <!-- about section design -->
 
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="images/about.png" alt="" class="max-w-[35vw] md:max-w-[70vw] md:mt-[4rem]">
+        </div>
+
+        <div class="about-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <h3>Software Engineer | Frontend Developer | Graphic Designer</h3>
+            <p>I am a Computer Science Engineering graduate from Kerala, driven by a passion for the software field. Currently, I am actively involved in enhancing my expertise in Front-end Development through project-based learning.
+                Having delved into the realm of Graphic Design, I have successfully taken up freelance works, showcasing my skills as a versatile Graphic Designer.
+                My appetite for knowledge and enthusiasm to stay at the forefront of technological advancements motivate me to continuously explore new tools and technologies. 
+
+            </p>
+            <a href="https://www.linkedin.com/in/joel-varghese-stanley/" class="btn">Read More</a>
+        </div>
+    </section>
+
     <!-- services section design -->
 
     <!-- portfolio section design -->
 
+    <section class="portfolio" id="portfolio">
+        <h2 class="heading">Latest <span>Project</span></h2>
+
+        <div class="portfolio-container">
+            <div class="portfolio-box">
+                <img src="images/xclone.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>Twitter Clone (XClone)</h4>
+                    <p>A simple clone website of X (formerly Twitter), named as 'XClone'.</p>
+                    <a href="https://github.com/JoelVStan/Twitter-Clone"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="images/chome-extension.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>Save Links Chrome Extension</h4>
+                    <p>This is a simple chrome extension by which you can save links (URLs) to websites for future references.</p>
+                    <a href="https://github.com/JoelVStan/Save-Links-Chrome-Extension"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="images/meme-picker.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>Meme Picker</h4>
+                    <p>A meme picker website designed in name of my pet 'Vicky the Labrador'.</p>
+                    <a href="https://github.com/JoelVStan/Meme-Picker"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="images/annoying-cookie.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>Annoying Cookie Consent</h4>
+                    <p>It is a site which has an annoying consent pop-up message. You have to fill in your details to access this site. There is no way you can ignore the consent pop-up before filling out your details.</p>
+                    <a href="https://github.com/JoelVStan/Annoying-Cookie-Consent"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="images/addtocart.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>Add to Cart</h4>
+                    <p>A simple mobile/web application to store a set of items that you want to buy before going to the shop.</p>
+                    <a href="https://github.com/JoelVStan/Add-to-cart-using-firebase"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="images/unit-converter.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>Unit Converter</h4>
+                    <p>This is a simple unit converter web application. User can give a number and get that number converted to given units.</p>
+                    <a href="https://github.com/JoelVStan/Unit-Converter"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- contact section design -->
+
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me!</span></h2>
+
+        <form action="#">
+            <div class="input-box">
+                <input type="text" placeholder="Full Name">
+                <input type="email" placeholder="Email Address">
+            </div>
+            <div class="input-box">
+                <input type="number" placeholder="Mobile Number">
+                <input type="text" placeholder="Email Subject">
+            </div>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+            <input type="submit" name="" id="" value="Send Message" class="btn">
+        </form>
+    </section>
 
     <!-- footer design -->
 
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2023 by <span>Joel Stan</span> | All Rights Reserved.</p>
+        </div>
+
+        <div class="footer-iconTop">
+            <a href="#home"><i class='bx bx-up-arrow-alt' ></i></a>
+        </div>
+    </footer>
 
     <!-- scroll reveal -->
     <script src="https://unpkg.com/scrollreveal"></script>

@@ -913,7 +913,7 @@ span{
   --tw-gradient-from: transparent var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(0 0 0 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-  --tw-gradient-to: var(--second-bg-color) var(--tw-gradient-to-position);
+  --tw-gradient-to: #0891b2 var(--tw-gradient-to-position);
   padding-top: 0px;
   padding-bottom: 0px;
   padding-left: 4rem;
@@ -929,14 +929,14 @@ span{
 .portfolio-box:hover .portfolio-layer{
   --tw-translate-y: 0px;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  padding-top: 15rem;
+  padding-top: 8rem;
 }
 
 .portfolio-layer h4{
   margin-bottom: 1rem;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 700;
-  line-height: 3.25rem;
+  line-height: 2.5rem;
 }
 
 .portfolio-layer p{

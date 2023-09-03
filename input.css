@@ -130,15 +130,15 @@
     }
 
     .portfolio-box .portfolio-layer {
-        @apply absolute bottom-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-second-bg-color flex justify-center items-center flex-col text-center py-0 px-[4rem] translate-y-full transition duration-500
+        @apply absolute bottom-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-cyan-600 flex justify-center items-center flex-col text-center py-0 px-[4rem] translate-y-full transition duration-500
     }
 
     .portfolio-box:hover .portfolio-layer {
-        @apply translate-y-0 pt-60
+        @apply translate-y-0 pt-32
     }
 
     .portfolio-layer h4 {
-        @apply text-[3rem] font-bold mb-[1rem] leading-[3.25rem]
+        @apply text-[2.5rem] font-bold mb-[1rem] leading-[2.5rem]
     }
 
 
